@@ -1,0 +1,67 @@
+= {extension}-ui ui bundle extension
+:namespace: djencks
+:extension: asciidoctor-docs-ui
+:extension-version: 0.0.1
+
+== Description
+
+This ui bundle extension...
+
+== Usage
+
+Install the dependencies by running `npm run plain-install`.
+
+To build a ui bundle based on the antora-ui-default sources with the additions from this extension, run `npm run build`.
+Running `gulp` may work or may use an incompatible globally installed gulp version.
+
+== Combining this UI source with other UI projects using the `@djencks/ui-builder`
+
+To combine the UI elements from this extension with other elements, using @djencks/antora-ui-builder, set up a ui project. The simplest way to do this is with @djencks/antora-schematics:
+
+[source,console]
+----
+npm i -g @djencks/antora-schematics
+antora-schematics uiExtension --help
+# you may wish to examine the options
+antora-schematics uiExtension --path my-ui --extensionName my-ui --namespace my-corp
+----
+This will set up a UI project in a new git repository under my-ui.
+
+If you do not use the schematic, consult the ui-builder documentation. Much of the following is done by the schematic.
+
+
+
+
+Include in your antora-ui.yml a clause such as:
+
+[source,yml,subs="+attributes]
+----
+sources:
+  - path: antora-ui-default #replace or extend as needed
+  - path: @{namespace}/{extension}-ui
+----
+
+Set up your UI project as a ui builder project and include in the `package.json`
+
+[source,json,subs="+attributes"]
+----
+{
+  "name": "...",
+  "version": "...",
+  "description": "...",
+  "main": "gulpfile.js",
+  "files": [
+    "src/**/*",
+    "build/**/*"
+  ],
+  "devDependencies": {
+    "@djencks/antora-ui-builder": "https://experimental-repo.s3-us-west-1.amazonaws.com/djencks-antora-ui-builder-0.0.8.tgz",
+    "@antora/antora-ui-default": "git+https://gitlab.com/antora/antora-ui-default.git",
+    "@{namespace}/{extension}-ui": "https://experimental-repo.s3-us-west-1.amazonaws.com/{namespace}-{extension}-ui-{extension-version}.tgz"
+  }
+}
+----
+
+NOTE: This assumes I (djencks) deployed the extension to my experimental repo.
+You will need to arrange your own distribution mechanism.
+

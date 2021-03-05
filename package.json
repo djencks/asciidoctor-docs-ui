@@ -1,0 +1,19 @@
+{
+  "name": "@djencks/asciidoctor-docs-ui-ui",
+  "version": "0.0.1",
+  "description": "asciidoctor-docs-ui ui contents",
+  "main": "gulpfile.js",
+  "files": [
+    "src/**/*",
+    "build/**/*"
+  ],
+  "scripts": {
+    "clean-install": "rm -rf node_modules/ .cache/ package-lock.json ;npm run plain-install",
+    "plain-install": "npm i --cache=.cache/npm --no-optional",
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "@djencks/antora-ui-builder": "https://experimental-repo.s3-us-west-1.amazonaws.com/djencks-antora-ui-builder-0.0.8.tgz",
+    "@antora/antora-ui-default": "https://gitlab.com/antora/antora-ui-default.git"
+  }
+}
