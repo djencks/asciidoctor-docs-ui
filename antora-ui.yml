@@ -1,4 +1,14 @@
 sources:
-  - path: '@antora/antora-ui-default'
+  - path: 'asciidoctor-docs-ui'
+    filter:
+      - css/*.css
+      - helpers/*.js
+      - img/*
+      - js/*.js
+      - js/vendor/highlight.bundle.js
+      - layouts/*
+      - partials/*
+  - path: '@djencks/header-footer-shim'
+  - path: '@djencks/lunr-ui'
   - path: ./
-bundle-name: asciidoctor-docs-ui-ui
+bundle-name: asciidoctor-docs-lunr-ui

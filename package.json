@@ -14,6 +14,8 @@
   },
   "devDependencies": {
     "@djencks/antora-ui-builder": "https://experimental-repo.s3-us-west-1.amazonaws.com/djencks-antora-ui-builder-0.0.8.tgz",
-    "@antora/antora-ui-default": "https://gitlab.com/antora/antora-ui-default.git"
+    "@djencks/header-footer-shim": "https://experimental-repo.s3-us-west-1.amazonaws.com/djencks-header-footer-shim-ui-0.0.1.tgz",
+    "@djencks/lunr-ui": "https://experimental-repo.s3-us-west-1.amazonaws.com/djencks-lunr-ui-0.0.4.tgz",
+    "asciidoctor-docs-ui": "https://github.com/asciidoctor/asciidoctor-docs-ui.git"
   }
 }
