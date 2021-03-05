@@ -11,4 +11,8 @@ sources:
   - path: '@djencks/header-footer-shim'
   - path: '@djencks/lunr-ui'
   - path: ./
+css:
+  - site.css
+  - home.css
+  - lunr/search.css
 bundle-name: asciidoctor-docs-lunr-ui

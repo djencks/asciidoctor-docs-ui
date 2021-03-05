@@ -1,7 +1,7 @@
 {
-  "name": "@djencks/asciidoctor-docs-ui-ui",
+  "name": "@djencks/asciidoctor-docs-lunr-ui",
   "version": "0.0.1",
-  "description": "asciidoctor-docs-ui ui contents",
+  "description": "asciidoctor-docs-lunr-ui contents",
   "main": "gulpfile.js",
   "files": [
     "src/**/*",
